@@ -92,19 +92,19 @@ const Login = () => {
         <form onSubmit={handleLogin}>
           <div className="form-control w-full mt-5">
             <label className="label">
-              <span className="label-text text-secondary font-bold">Email</span>
+              <span className="label-text  font-bold">Email</span>
             </label>
             <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="input input-bordered border p-2 rounded-md mt-1 w-full"
+              className="input input-bordered focus:outline-0 p-2 rounded-md mt-1 w-full"
             />
           </div>
 
           <div className="relative form-control w-full mt-5">
-            <div className="absolute top-10 right-5 z-40">
+            <div className="absolute top-14 right-5 z-40">
               {seePassword ? (
                 <div
                   onClick={() => setSeePassword(!seePassword)}
@@ -122,7 +122,7 @@ const Login = () => {
               )}
             </div>
             <label className="label">
-              <span className="label-text text-secondary font-bold">
+              <span className="label-text  font-bold">
                 Password
               </span>
             </label>
@@ -131,7 +131,7 @@ const Login = () => {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="input border p-2 rounded-md mt-1 input-primary w-full"
+              className="input input-bordered focus:outline-0 p-2 rounded-md mt-1  w-full"
             />
           </div>
 

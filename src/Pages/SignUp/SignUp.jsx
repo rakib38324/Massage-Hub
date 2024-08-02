@@ -82,30 +82,30 @@ const SignUp = () => {
         <form onSubmit={handleSignUp}>
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-secondary font-bold">Name</span>
+              <span className="label-text  font-bold">Name</span>
             </label>
             <input
               type="text"
               placeholder="@username"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="input border p-2 rounded-md mt-1 input-bordered w-full"
+              className="input input-bordered focus:outline-0 p-2 rounded-md mt-1 input-border focus:outline-0ed w-full"
             />
           </div>
           <div className="form-control w-full mt-5">
             <label className="label">
-              <span className="label-text text-secondary font-bold">Email</span>
+              <span className="label-text  font-bold">Email</span>
             </label>
             <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="input input-bordered border p-2 rounded-md mt-1 w-full"
+              className="input input-bordered focus:outline-0  p-2 rounded-md mt-1 w-full"
             />
           </div>
           <div className="relative form-control w-full mt-5">
-            <div className="absolute top-10 right-5 z-40">
+            <div className="absolute top-14 right-5 z-40">
               {seePassword ? (
                 <div
                   onClick={() => setSeePassword(!seePassword)}
@@ -123,7 +123,7 @@ const SignUp = () => {
               )}
             </div>
             <label className="label">
-              <span className="label-text text-secondary font-bold">
+              <span className="label-text  font-bold">
                 Password
               </span>
             </label>
@@ -132,11 +132,11 @@ const SignUp = () => {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="input border p-2 rounded-md mt-1 input-primary w-full"
+              className="input  input-bordered focus:outline-0 p-2 rounded-md mt-1 w-full"
             />
           </div>
           <div className="relative form-control w-full mt-5">
-            <div className="absolute top-10 right-5 z-40">
+            <div className="absolute top-14 right-5 z-40">
               {seePassword ? (
                 <div
                   onClick={() => setSeePassword(!seePassword)}
@@ -154,7 +154,7 @@ const SignUp = () => {
               )}
             </div>
             <label className="label">
-              <span className="label-text text-secondary font-bold">
+              <span className="label-text  font-bold">
                 Confirm Password
               </span>
             </label>
@@ -163,7 +163,7 @@ const SignUp = () => {
               placeholder="Re-type password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="input border p-2 rounded-md mt-1 input-primary w-full"
+              className="input  input-bordered focus:outline-0 p-2 rounded-md mt-1 w-full"
             />
           </div>
           <div className="flex gap-3 mt-5">
