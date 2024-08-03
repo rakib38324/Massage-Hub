@@ -37,6 +37,7 @@ const SignUp = () => {
         duration: 6000,
       });
       setSignUPError("Password and Confirm Password are not matched.");
+      setLoading(false);
       return;
     }
 
@@ -55,13 +56,13 @@ const SignUp = () => {
             //Upload image and save database imgibb
             if (user.accessToken) {
               localStorage.setItem("accessToken", user.accessToken);
-              setToken(user.accessToken);
             }
             toast.success("SignUp Successfully.", {
               id: toastId,
               duration: 3000,
             });
             setLoading(false);
+            navigate(from, { replace: true });
           })
           .catch((err) => console.log(err));
       })
