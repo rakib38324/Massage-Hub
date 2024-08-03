@@ -42,6 +42,7 @@ const Login = () => {
           duration: 3000,
         });
         setLoading(false);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         toast.error("Oops! Something want wrong. Try again leater.", {
@@ -74,6 +75,7 @@ const Login = () => {
           duration: 3000,
         });
         setLoading(false);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         toast.error("Oops! Something want wrong. Try again leater.", {
@@ -122,9 +124,7 @@ const Login = () => {
               )}
             </div>
             <label className="label">
-              <span className="label-text  font-bold">
-                Password
-              </span>
+              <span className="label-text  font-bold">Password</span>
             </label>
             <input
               type={seePassword ? "text" : "password"}
